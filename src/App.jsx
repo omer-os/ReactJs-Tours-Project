@@ -18,6 +18,11 @@ function App() {
     }
   }
 
+  const notInterested = (id)=>{
+    const newTours = tour.filter(tour=>tour.id!==id)
+    setTour(newTours)
+  }
+
 
   useEffect(fetchTheTours,[])
 
@@ -28,7 +33,7 @@ function App() {
       
       {tour.map((i)=>{
       
-        return <Tours name={i.name} id={i.id} image={i.image} info={i.info} price={i.price} />
+        return <Tours key={i.id} notInterested={notInterested} tour={tour} name={i.name} id={i.id} image={i.image} info={i.info} price={i.price} />
       
       })}
     </div>

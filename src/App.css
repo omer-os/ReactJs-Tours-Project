@@ -36,3 +36,18 @@ i{
     text-decoration: underline;
     cursor: pointer;
 }
+
+
+.deleteButton{
+    background-color: chocolate;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}.deleteButton:hover{
+    transform: scale(1.09);
+    box-shadow: 0px 0px 7px rgb(65, 64, 64);
+}
