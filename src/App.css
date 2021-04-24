@@ -51,3 +51,19 @@ i{
     transform: scale(1.09);
     box-shadow: 0px 0px 7px rgb(65, 64, 64);
 }
+
+.refresh{
+    padding: 10px;
+    font-size: 25px;
+    background-color: red;
+    color: white;
+    margin: auto;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.noTours{
+    text-align: center;
+    color: red;
+}

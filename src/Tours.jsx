@@ -10,7 +10,6 @@ export default function Tours({notInterested ,tour ,name ,id ,image ,info, price
     const seeMore = ()=>{
         setInfoText(info)
         setShowing(false)
-
     }
 
     const showLess = ()=>{
@@ -21,7 +20,7 @@ export default function Tours({notInterested ,tour ,name ,id ,image ,info, price
 
     return (
         <div className='tour'>
-            <button className='deleteButton' onClick={()=>{notInterested(id)}}>hide</button>
+            <button className='deleteButton' onClick={()=>{notInterested(id)}}>not interested</button>
 
             <div className="tourName">{name}</div>
             
