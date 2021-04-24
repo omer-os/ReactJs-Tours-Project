@@ -1,0 +1,35 @@
+import React, { useState } from 'react'
+import './App.css'
+
+export default function Tours({name,id,image,info,price}) {
+
+    const [infoText, setInfoText] = useState(info.slice(0,170)+'...')
+    const [showing, setShowing] = useState(true)
+
+
+    const seeMore = ()=>{
+        setInfoText(info)
+        setShowing(false)
+
+    }// info.slice(1,170)+'...'
+
+    const showLess = ()=>{
+        setInfoText(info.slice(0,170)+'...')
+        setShowing(true)
+    }
+
+    return (
+        <div className='tour'>
+            <div className="tourName">{name}</div>
+            
+            <img className='tourImage' src={image} alt=""/>
+
+            <div className="tourInfo">{infoText}
+            
+            { showing && <i onClick={seeMore}> see more</i> }
+            { !showing && <i onClick={showLess}>show less</i> }
+            
+            </div>
+        </div>
+    )
+}

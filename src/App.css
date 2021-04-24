@@ -1,0 +1,38 @@
+body{
+    background-color: #83A5FF;
+    display: flex;
+    justify-content: center;
+
+}
+.tour{
+    background-color: white;
+    margin: auto;
+    max-width: 80%;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.tourImage{
+    max-width: 250px;
+    margin-top: 20px;
+}.tourName{
+    color: red;
+    font-size: 25px;
+}.tourInfo{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    max-width: 500px;
+}
+.header{
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid rgb(66, 111, 206);
+    padding-bottom: 10px;
+}
+
+i{
+    color: blue;
+    font-size: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
