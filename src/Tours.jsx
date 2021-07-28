@@ -24,7 +24,9 @@ export default function Tours({notInterested ,tour ,name ,id ,image ,info, price
 
             <div className="tourName">{name}</div>
             
-            <img className='tourImage' src={image} alt=""/>
+            <div className="timage">
+                <img className='tourImage' src={image} alt=""/>
+            </div>
 
 
             <div className="tourInfo">{infoText}

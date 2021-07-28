@@ -1,0 +1,31 @@
+# first create react project and cd into it
+
+
+# run these commands :
+mkdir api && cd api
+virtualenv -p python venv
+venv\Scripts\activate
+touch api.py                # create the flask app in tis file
+touch .env                  
+
+
+# then you have to go to .env file
+# and write this code :
+
+FLASK_APP = api.py
+FLASK_ENV = development
+
+# then start the server with :
+flask run
+
+
+
+# add this to package.json : 
+"proxy":"http://127.0.0.1:5000/"
+
+# and in "scripts" write this :
+"flask" : "cd api && venv\\Scripts\\activate run && flask run"
+
+
+# whenever you want to start flask server just write :
+npm run flask

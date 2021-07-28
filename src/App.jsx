@@ -11,9 +11,9 @@ function App() {
 
   const fetchTheTours = async()=>{
     try {
-      const response = await fetch(url)
+      const response = await fetch('/tours')
       const data = await response.json()
-      setTour(data)
+      setTour(data["results"])
       setLoading(false)
     } catch (error) {
       console.log(error);
@@ -34,9 +34,9 @@ function App() {
     <div className="App">
       <h1 className='header'>Todays Tours</h1>
       {loading && <h1>Loading ...</h1>}
+      
       { tour.length==0  && loading==false && <div className="noTours"><h1>No Tours</h1><button className='refresh' onClick={fetchTheTours}>Refresh</button></div>}
       {tour.map((i)=>{
-      
         return <Tours key={i.id} notInterested={notInterested} tour={tour} name={i.name} id={i.id} image={i.image} info={i.info} price={i.price} />
       
       })}
