@@ -4,7 +4,6 @@ import Tours from './Tours'
 
 function App() {
 
-  const url = 'https://course-api.com/react-tours-project'
   const [tour, setTour] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -15,7 +14,8 @@ function App() {
       const data = await response.json()
       setTour(data["results"])
       setLoading(false)
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
     }
   }
@@ -26,7 +26,8 @@ function App() {
   }
 
 
-  useEffect(fetchTheTours,[])
+  useEffect(()=>{
+    fetchTheTours()},[])
 
 
 
@@ -35,7 +36,7 @@ function App() {
       <h1 className='header'>Todays Tours</h1>
       {loading && <h1>Loading ...</h1>}
       
-      { tour.length==0  && loading==false && <div className="noTours"><h1>No Tours</h1><button className='refresh' onClick={fetchTheTours}>Refresh</button></div>}
+      { tour.length===0  && loading===false && <div className="noTours"><h1>No Tours Left</h1><button className='refresh' onClick={fetchTheTours}>Refresh</button></div>}
       {tour.map((i)=>{
         return <Tours key={i.id} notInterested={notInterested} tour={tour} name={i.name} id={i.id} image={i.image} info={i.info} price={i.price} />
       
